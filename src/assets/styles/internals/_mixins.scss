@@ -1,0 +1,17 @@
+@use './variables';
+
+@mixin fontz($s, $h, $c) {
+  font-size: $s;
+  line-height: $h;
+  color: $c;
+}
+
+@mixin header-52 {
+  @include fontz(5.2rem, 1.45, $white-100);
+  font-weight: 700;
+}
+
+@mixin header-42 {
+  @include fontz(4.2rem, 1.4, $white-100);
+  font-weight: 700;
+}
