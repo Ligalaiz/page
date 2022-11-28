@@ -47,15 +47,181 @@
       <header class="header" id="header">
         <div class="container">
           <div class="header__wrap">
-            <div class="header__logo logo">
-              <img class="logo__img" src="../../assets/img/logo.png" alt="logo" />
-            </div>
-            <nav class="header__nav nav">
-              <ul class="nav__list">
-                <li class="nav__item">
-                  <a class="nav__link">Menu item</a>
-                </li>
-              </ul>
+            <a class="header__logo logo" href="/" title="На главную">
+              <img class="logo__img" src="../../assets/img/logo.png" alt="Page" />
+            </a>
+            <nav class="header__main-nav main-nav" aria-label="Основное меню">
+              <div class="main-nav__desctop">
+                <ul class="main-nav__list main-nav__list--main">
+                  <li class="main-nav__item">
+                    <a class="main-nav__link" href="#">
+                      <span class="main-nav__icon" aria-hidden="true">
+                        <svg aria-hidden="true" width="16" height="16">
+                          <use xlink:href="../../assets/img/sprites.svg#course"></use>
+                        </svg>
+                      </span>
+                      Практикум
+                    </a>
+                    <ul class="main-nav__submenu submenu-main">
+                      <li class="submenu-main__item">
+                        <a class="submenu-main__link" href="#">Курсы для новичков</a>
+                      </li>
+                      <li class="submenu-main__item">
+                        <a class="submenu-main__link" href="#">Карта обучения</a>
+                      </li>
+                      <li class="submenu-main__item">
+                        <a class="submenu-main__link" href="#">Профессиональные навыки</a>
+                      </li>
+                      <li class="submenu-main__item">
+                        <a class="submenu-main__link" href="#">Проекты для практики</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="main-nav__item">
+                    <a class="main-nav__link" href="#" title="Профессии">
+                      <span class="main-nav__icon">
+                        <svg aria-hidden="true" width="16" height="16">
+                          <use xlink:href="../../assets/img/sprites.svg#hat"></use>
+                        </svg>
+                      </span>
+                      Профессии
+                    </a>
+                    <ul class="main-nav__submenu submenu-main">
+                      <li class="submenu-main__item">
+                        <a class="submenu-main__link" href="#">Фронтенд-разработчик</a>
+                      </li>
+                      <li class="submenu-main__item">
+                        <a class="submenu-main__link" href="#">JavaScript-разработчик</a>
+                      </li>
+                      <li class="submenu-main__item">
+                        <a class="submenu-main__link" href="#">Фулстек-разработчик</a>
+                      </li>
+                      <li class="submenu-main__item">
+                        <a class="submenu-main__link" href="#">Бэкенд-разработчик</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="main-nav__item">
+                    <a class="main-nav__link" href="#" title="Курсы">
+                      <span class="main-nav__icon" aria-hidden="true">
+                        <svg aria-hidden="true" width="16" height="16">
+                          <use xlink:href="../../assets/img/sprites.svg#intensive"></use>
+                        </svg>
+                      </span>
+                      Курсы
+                    </a>
+                    <ul class="main-nav__submenu submenu-main">
+                      <li class="submenu-main__item">
+                        <a class="submenu-main__link" href="#">
+                          HTML и&nbsp;CSS.<br />
+                          Профессиональная вёрстка сайтов</a
+                        >
+                      </li>
+                      <li class="submenu-main__item">
+                        <a class="submenu-main__link" href="#"
+                          >HTML и&nbsp;CSS.<br />
+                          Адаптивная вёрстка и&nbsp;автоматизация</a
+                        >
+                      </li>
+                      <li class="submenu-main__item">
+                        <a class="submenu-main__link" href="#"
+                          >JavaScript.<br />
+                          Профессиональная разработка веб-интерфейсов</a
+                        >
+                      </li>
+                      <li class="submenu-main__item">
+                        <a class="submenu-main__link" href="#"
+                          >JavaScript.<br />
+                          Архитектура клиентских приложений</a
+                        >
+                      </li>
+                      <li class="submenu-main__item">
+                        <a class="submenu-main__link" href="#"
+                          >React.<br />
+                          Разработка сложных клиентских приложений</a
+                        >
+                      </li>
+                      <li class="submenu-main__item">
+                        <a class="submenu-main__link" href="#"
+                          >Node.js.<br />
+                          Профессиональная разработка REST API</a
+                        >
+                      </li>
+                      <li class="submenu-main__item">
+                        <a class="submenu-main__link" href="#">Анимация для фронтендеров</a>
+                      </li>
+                      <li class="submenu-main__item">
+                        <a class="submenu-main__link" href="#">Регулярные выражения для фронтендеров</a>
+                      </li>
+                      <li class="submenu-main__item">
+                        <a class="submenu-main__link" href="#">Алгоритмы и&nbsp;структуры данных</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <ul class="main-nav__list main-nav__list--auth">
+                  <li class="main-nav__item">
+                    <a class="main-nav__link" href="#" title="Регистрация">
+                      <span class="main-nav__icon">
+                        <svg aria-hidden="true" width="16" height="16">
+                          <use xlink:href="../../assets/img/sprites.svg#user"></use>
+                        </svg>
+                      </span>
+                      Регистрация
+                    </a>
+                  </li>
+                  <li class="main-nav__item main-nav__item--login">
+                    <a class="main-nav__link" href="#" title="Войти">
+                      <span class="main-nav__icon">
+                        <svg aria-hidden="true" width="16" height="16">
+                          <use xlink:href="../../assets/img/sprites.svg#login"></use>
+                        </svg>
+                      </span>
+                      Войти
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <button class="main-nav__switcher" type="button"><span></span></button>
+              <div class="main-nav__tab">
+                <ul class="main-nav__list">
+                  <li class="main-nav__item main-nav__item--logo">
+                    <a class="main-nav__link" href="/" title="На главную">
+                      <img src="../../assets/img/logo.png" width="104" height="36" alt="Page" />
+                    </a>
+                  </li>
+                  <li class="main-nav__item">
+                    <a class="main-nav__link" href="#">
+                      <span class="main-nav__icon">
+                        <svg aria-hidden="true" width="16" height="16">
+                          <use xlink:href="../../assets/img/sprites.svg#course"></use>
+                        </svg>
+                      </span>
+                      Практикум
+                    </a>
+                  </li>
+                  <li class="main-nav__item">
+                    <a class="main-nav__link" href="#">
+                      <span class="main-nav__icon">
+                        <svg aria-hidden="true" width="16" height="16">
+                          <use xlink:href="../../assets/img/sprites.svg#hat"></use>
+                        </svg>
+                      </span>
+                      Профессия
+                    </a>
+                  </li>
+                  <li class="main-nav__item">
+                    <a class="main-nav__link" href="#">
+                      <span class="main-nav__icon">
+                        <svg aria-hidden="true" width="16" height="16">
+                          <use xlink:href="../../assets/img/sprites.svg#intensive"></use>
+                        </svg>
+                      </span>
+                      Курсы
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </nav>
           </div>
         </div>
