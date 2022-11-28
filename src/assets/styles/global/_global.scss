@@ -58,9 +58,17 @@ p {
 
 .container {
   width: 100%;
-  max-width: 96rem;
+  max-width: 14.4rem;
   margin: 0 auto;
   padding: 0 1rem;
+
+  @media (min-width: 426px) {
+    padding: 0 2.5rem;
+  }
+
+  @media (min-width: 1440px) {
+    max-width: 19.2rem;
+  }
 }
 
 input:focus {
@@ -82,7 +90,7 @@ body {
   word-wrap: break-word;
   line-height: 1.4;
 
-  background-color:$grey-2d2;
+  background-color: $grey-2d2;
 
   user-select: none;
   -webkit-font-smoothing: antialiased;
