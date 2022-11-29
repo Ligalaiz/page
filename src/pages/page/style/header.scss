@@ -268,9 +268,13 @@
   @media (min-width: 849.99px) {
     position: absolute;
     top: 100%;
+
     display: none;
     width: 30rem;
     margin-bottom: 0;
+
+    background-color: $grey-414;
+    z-index: 10;
   }
 
   @media (min-width: 949.99px) {
@@ -303,6 +307,26 @@
 
     &:hover {
       color: $grey-8f8;
+    }
+  }
+
+  &__item {
+    &--separator {
+      position: relative;
+      padding-bottom: 3rem;
+
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 1.5rem;
+        left: 2rem;
+
+        display: block;
+        width: calc(100% - 4rem);
+        height: 0.1rem;
+
+        border-bottom: 0.1rem solid $grey-6c6;
+      }
     }
   }
 }
@@ -426,11 +450,14 @@
 }
 
 .main-nav__list > .main-nav__item:hover {
-  & .submenu-main {
-    display: block;
+  @media (min-width: 849.99px) {
+    & .submenu-main {
+      display: block;
+    }
+
+    & .main-nav__link {
+      background-color: $grey-414;
+    }
   }
 
-  & .main-nav__link {
-    background-color: $grey-414;
-  }
 }
