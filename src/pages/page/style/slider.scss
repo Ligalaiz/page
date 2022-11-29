@@ -1,0 +1,275 @@
+@use '../../../assets/styles/internals/index';
+
+.slider-wrap {
+  display: none;
+}
+
+@media (min-width: 767.99px) {
+  .slider-wrap {
+    display: block;
+  }
+
+  .slider {
+    position: relative;
+
+    min-height: 30rem;
+    margin-bottom: 9.6rem;
+    border-width: 0.3rem;
+
+    color: $white-100;
+
+    overflow: hidden;
+
+    @media (min-width: 626px) {
+      border-width: unset;
+    }
+
+    @media (min-width: 1023.99px) {
+      min-height: 40rem;
+    }
+
+    &__img {
+      background-size: 38.3rem;
+      background-position: 50% 53%;
+
+      @media (min-width: 626px) {
+        background-size: 61rem;
+        background-size: unset;
+      }
+
+      @media (min-width: 698px) {
+        background-size: 70rem;
+      }
+
+      @media (min-width: 930px) {
+        background-size: unset;
+      }
+    }
+
+    & .container {
+      position: relative;
+      top: 49%;
+    }
+
+    &__wrap {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      transform: translate(-50%, -50%);
+    }
+
+    &__slides {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    &__item {
+      position: relative;
+      margin: 0 auto;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      min-height: 30rem;
+
+      animation: 1.4s linear;
+
+      @media (min-width: 1023.99px) {
+        height: 40rem;
+      }
+
+      &--first {
+        background-color: $red-c9a;
+      }
+
+      &--second {
+        background-color: $blue-a7c;
+      }
+
+      &--third {
+        background-color: $green-acb;
+      }
+    }
+
+    &__btn {
+      position: absolute;
+      top: 49%;
+      transform: translateY(-50%);
+
+      width: 1.6rem;
+      height: 2.7rem;
+      border: none;
+
+      background-color: transparent;
+
+      cursor: pointer;
+
+      & > span {
+        &:before,
+        &:after {
+          content: '';
+          position: absolute;
+          left: 0.4rem;
+          top: 50%;
+          transform: translateY(-50%) rotate(45deg);
+
+          width: 1.5rem;
+          height: 1.5rem;
+          border: 0.2rem solid $white-100;
+          border-top: none;
+          border-right: none;
+        }
+
+        &:before {
+          left: 0.4rem;
+        }
+
+        &:after {
+          left: 1.2rem;
+        }
+      }
+
+      &--next {
+        transform: translateY(-50%) rotate(180deg);
+        right: 0;
+        right: 1rem;
+
+        @media (min-width: 626px) {
+          right: 2.6rem;
+        }
+
+        @media (min-width: 930px) {
+          right: unset;
+        }
+      }
+
+      &--prev {
+        left: 1rem;
+
+        @media (min-width: 626px) {
+          left: 2.6rem;
+        }
+
+        @media (min-width: 930px) {
+          left: unset;
+        }
+      }
+    }
+
+    &__slide {
+      width: 100%;
+      height: 30rem;
+      background-repeat: no-repeat;
+      background-position: 50%;
+
+      @media (min-width: 1023.99px) {
+        height: 40rem;
+      }
+    }
+  }
+
+  .active,
+  .next {
+    display: flex;
+  }
+
+  .next {
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  .to-left {
+    animation-name: left;
+  }
+
+  .from-right {
+    animation-name: right;
+  }
+
+  .to-right {
+    animation-name: right;
+    animation-direction: reverse;
+  }
+
+  .from-left {
+    animation-name: left;
+    animation-direction: reverse;
+  }
+
+  @keyframes left {
+    from {
+      left: 0;
+    }
+    to {
+      left: -100%;
+    }
+  }
+
+  @keyframes right {
+    from {
+      left: 100%;
+    }
+    to {
+      left: 0;
+    }
+  }
+
+  .slide-slider {
+    display: flex;
+    justify-content: center;
+    padding-left: 4rem;
+
+    @media (min-width: 1023.99px) {
+      padding-left: unset;
+    }
+
+    &__left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 50rem;
+      padding: 2rem;
+    }
+
+    &__right {
+      display: flex;
+      align-items: center;
+    }
+
+    &__title {
+      margin-bottom: 2rem;
+
+      @include fontz(3rem, 1.14, $white-100);
+
+      @media (min-width: 1023.99px) {
+        font-size: 4.2rem;
+      }
+    }
+
+    &__text {
+      @include fontz(1.6rem, 1.3, $white-100);
+
+      @media (min-width: 1023.99px) {
+        font-size: 1.8rem;
+      }
+    }
+
+    &__img-wrap {
+      position: relative;
+
+      width: 30rem;
+      height: 30rem;
+
+      @media (min-width: 1023.99px) {
+        width: 40rem;
+        height: 40rem;
+      }
+
+      & img {
+        object-fit: contain;
+      }
+    }
+  }
+}
