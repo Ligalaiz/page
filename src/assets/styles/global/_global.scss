@@ -58,7 +58,7 @@ p {
 
 .container {
   width: 100%;
-  max-width: 14.4rem;
+  max-width: 144rem;
   margin: 0 auto;
   padding: 0 1rem;
 
@@ -67,7 +67,7 @@ p {
   }
 
   @media (min-width: 1440px) {
-    max-width: 19.2rem;
+    max-width: 192rem;
   }
 }
 
@@ -166,7 +166,7 @@ ul {
 ::-webkit-scrollbar-thumb {
   border-radius: 0.5rem;
 
-  background: $grey-2d2;
+  background: $grey-8f8;
   background-clip: padding-box;
 }
 
