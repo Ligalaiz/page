@@ -1,5 +1,13 @@
 @font-face {
   font-weight: 400;
+  font-family: "Marckscript";
+  font-style: normal;
+  font-display: swap;
+  src: url(../../fonts/marckscript-regular.woff2) format("woff2"),url(../../fonts/marckscript-regular.woff) format("woff")
+}
+
+@font-face {
+  font-weight: 400;
   font-family: "TT Norms Pro";
   font-style: normal;
   font-display: swap;
