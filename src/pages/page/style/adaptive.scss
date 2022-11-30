@@ -1,0 +1,167 @@
+@use '../../../assets/styles/internals/index';
+
+.adaptive {
+  padding: 2rem 0;
+
+  @media (min-width: 1024px) {
+    padding: 4rem 0;
+  }
+
+  &__wrap {
+    display: flex;
+    justify-content: flex-end;
+    gap: 3rem;
+
+    @media (min-width: 991.99px) {
+      gap: 4rem;
+    }
+
+    @media (min-width: 1024.99px) {
+      gap: 5rem;
+    }
+  }
+
+  &__content {
+    max-width: 120rem;
+  }
+
+  &__title {
+    max-width: 80rem;
+    margin-bottom: 1rem;
+
+    @include fontz(2.2rem, 1.4, $grey-333);
+    text-align: center;
+
+    @media (min-width: 575.99px) {
+      font-size: 2.8rem;
+    }
+
+    @media (min-width: 991.99px) {
+      font-size: 3.4rem;
+      text-align: left;
+    }
+
+    @media (min-width: 1024.99px) {
+      font-size: 4rem;
+    }
+  }
+
+  &__text {
+    margin-bottom: 1rem;
+
+    @include fontz(1.6rem, 1.4, $grey-333);
+    text-align: justify;
+    text-indent: 2rem;
+
+    @media (min-width: 991.99px) {
+      font-size: 1.8rem;
+    }
+
+    &--separator {
+      padding-top: 2rem;
+      border-top: 0.3rem solid $grey-e8e;
+
+      @media (min-width: 1024px) {
+        padding-top: 3rem;
+      }
+    }
+
+    &--last {
+      margin-bottom: 2rem;
+
+      @media (min-width: 1024px) {
+        margin-bottom: 5rem;
+      }
+    }
+  }
+}
+
+.popular-adaptive {
+  display: none;
+
+  @media (min-width: 767.99px) {
+    display: block;
+    flex: 1 0 auto;
+    min-width: 20rem;
+    max-width: 30rem;
+    width: 100%;
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    &__item {
+      display: flex;
+      justify-content: flex-start;
+      gap: 2rem;
+    }
+
+    &__img-wrap {
+      position: relative;
+
+      flex: 1 0 auto;
+      width: 7rem;
+      height: 7rem;
+      max-width: 7rem;
+    }
+
+    &__title {
+      margin-bottom: 2rem;
+
+      @include fontz(1.8rem, 1.4, $grey-333);
+    }
+
+    &__text {
+      margin-bottom: 1rem;
+
+      @include fontz(1.6rem, 1.4, $red-f44);
+    }
+
+    &__date {
+      @include fontz(1.4rem, 1.2, $grey-8f8);
+    }
+  }
+}
+
+.quote-adaptive {
+  &__text {
+    padding-left: 4rem;
+
+    @include fontz(2rem, 1.4, $grey-2d2);
+    font-family: Marckscript;
+
+    line-height: 2;
+    font-weight: 700;
+    word-spacing: -0.7rem;
+
+    @media (min-width: 991.99px) {
+      font-size: 2.4rem;
+    }
+
+    @media (min-width: 1024px) {
+      padding-left: 5rem;
+
+      font-size: 3rem;
+    }
+
+    &--first {
+      position: relative;
+    }
+  }
+
+  &__sign {
+    position: absolute;
+    top: -1.5rem;
+    left: 0;
+
+    font-family: 'Times New Roman', sans-serif;
+    font-size: 6rem;
+    line-height: 1;
+
+    @media (min-width: 1024px) {
+      font-size: 8rem;
+    }
+  }
+}
