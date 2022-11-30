@@ -3,6 +3,8 @@
 .header {
   min-height: 6rem;
 
+  background-color: $grey-2d2;
+
   z-index: 11;
 
   &__wrap {
@@ -374,7 +376,7 @@
       padding-right: 10px;
       padding-left: 10px;
 
-      background-color: $blue-2d2-97;
+      background-color: $grey-2d2-97;
 
       z-index: 20;
       overflow-y: auto;
@@ -449,7 +451,7 @@
   }
 }
 
-.main-nav__list > .main-nav__item:hover {
+.main-nav__list--main > .main-nav__item:hover {
   @media (min-width: 849.99px) {
     & .submenu-main {
       display: block;
@@ -459,5 +461,4 @@
       background-color: $grey-414;
     }
   }
-
 }

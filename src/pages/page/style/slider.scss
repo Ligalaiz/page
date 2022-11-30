@@ -4,25 +4,22 @@
   display: none;
 }
 
-@media (min-width: 767.99px) {
+@media (min-width: 575.99px) {
   .slider-wrap {
     display: block;
+
+    background-color: $white-100;
   }
 
   .slider {
     position: relative;
 
     min-height: 30rem;
-    margin-bottom: 9.6rem;
     border-width: 0.3rem;
 
     color: $white-100;
 
     overflow: hidden;
-
-    @media (min-width: 626px) {
-      border-width: unset;
-    }
 
     @media (min-width: 1023.99px) {
       min-height: 40rem;
@@ -101,16 +98,23 @@
       height: 2.7rem;
       border: none;
 
+      border-radius: 50%;
+      height: 6rem;
+      width: 6rem;
       background-color: transparent;
 
       cursor: pointer;
+      transition: $anim;
+
+      &:hover {
+        background: $grey-2d2-97;
+      }
 
       & > span {
         &:before,
         &:after {
           content: '';
           position: absolute;
-          left: 0.4rem;
           top: 50%;
           transform: translateY(-50%) rotate(45deg);
 
@@ -122,38 +126,22 @@
         }
 
         &:before {
-          left: 0.4rem;
+          left: 2.2rem;
         }
 
         &:after {
-          left: 1.2rem;
+          left: 3rem;
         }
       }
 
       &--next {
         transform: translateY(-50%) rotate(180deg);
-        right: 0;
-        right: 1rem;
 
-        @media (min-width: 626px) {
-          right: 2.6rem;
-        }
-
-        @media (min-width: 930px) {
-          right: unset;
-        }
+        right: 0.6rem;
       }
 
       &--prev {
-        left: 1rem;
-
-        @media (min-width: 626px) {
-          left: 2.6rem;
-        }
-
-        @media (min-width: 930px) {
-          left: unset;
-        }
+        left: 0.6rem;
       }
     }
 
@@ -241,7 +229,11 @@
     &__title {
       margin-bottom: 2rem;
 
-      @include fontz(3rem, 1.14, $white-100);
+      @include fontz(2.2rem, 1.14, $white-100);
+
+      @media (min-width: 1023.99px) {
+        font-size: 3rem;
+      }
 
       @media (min-width: 1023.99px) {
         font-size: 4.2rem;
@@ -259,8 +251,13 @@
     &__img-wrap {
       position: relative;
 
-      width: 30rem;
-      height: 30rem;
+      width: 21rem;
+      height: 27rem;
+
+      @media (min-width: 767.99px) {
+        width: 30rem;
+        height: 30rem;
+      }
 
       @media (min-width: 1023.99px) {
         width: 40rem;
