@@ -1,6 +1,6 @@
 [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs) [![Maintainability](https://api.codeclimate.com/v1/badges/623fa261171c5165dbfa/maintainability)](https://codeclimate.com/github/Ligalaiz/page/maintainability) [![Netlify Status](https://api.netlify.com/api/v1/badges/f2ee8e78-8a81-4e0c-bbd9-f3de746329f1/deploy-status)](https://app.netlify.com/sites/page-ligalaiz/deploys)
 
-# Cart
+# Page
 
 Page. Demo: [link](https://page-ligalaiz.netlify.app/page.html/)
 
